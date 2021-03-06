@@ -1,18 +1,20 @@
 # SQLAlchemy Homework - Surfs Up!
 
-### Before You Begin
+### Background
 
-1. Create a new repository for this project called `sqlalchemy-challenge`. **Do not add this homework to an existing repository**.
+Congratulations! You've decided to treat yourself to a long holiday vacation in Honolulu, Hawaii! To help with your trip planning, you need to do some climate analysis on the area.
 
-2. Clone the new repository to your computer.
+## Repo Contains
 
-3. Add your Jupyter notebook and `app.py` to this folder. These will be the main scripts to run for analysis.
+Inside of EmployeeSQL, following are added:
 
-4. Push the above changes to GitHub or GitLab.
+* A Resources folder- csv and sqlite files for analysis
+* climate_starter.ipynb - Jupyter notebook for the main analysis
+* app.py - Python file to run the flask api
+* temp_analysis_bonus_1_starter.ipynb - Jupyter notebook for part 1 of the bonus(Temperature Analysis I)
+* temp_analysis_bonus_2_starter.ipynb - Jupyter notebook for part 2 of the bonus(Temperature Analysis II)
 
-![surfs-up.png](Images/surfs-up.png)
-
-Congratulations! You've decided to treat yourself to a long holiday vacation in Honolulu, Hawaii! To help with your trip planning, you need to do some climate analysis on the area. The following outlines what you need to do.
+## Instructions
 
 ## Step 1 - Climate Analysis and Exploration
 
@@ -25,8 +27,6 @@ To begin, use Python and SQLAlchemy to do basic climate analysis and data explor
 * Use SQLAlchemy `automap_base()` to reflect your tables into classes and save a reference to those classes called `Station` and `Measurement`.
 
 * Link Python to the database by creating an SQLAlchemy session.
-
-* **Important** Don't forget to close out your session at the end of your notebook.
 
 ### Precipitation Analysis
 
@@ -42,8 +42,6 @@ To begin, use Python and SQLAlchemy to do basic climate analysis and data explor
 
 * Plot the results using the DataFrame `plot` method.
 
-  ![precipitation](Images/precipitation.png)
-
 * Use Pandas to print the summary statistics for the precipitation data.
 
 ### Station Analysis
@@ -58,8 +56,6 @@ To begin, use Python and SQLAlchemy to do basic climate analysis and data explor
 
   * Using the most active station id, calculate the lowest, highest, and average temperature.
 
-  * Hint: You will need to use a function such as `func.min`, `func.max`, `func.avg`, and `func.count` in your queries.
-
 * Design a query to retrieve the last 12 months of temperature observation data (TOBS).
 
   * Filter by the station with the highest number of observations.
@@ -68,11 +64,6 @@ To begin, use Python and SQLAlchemy to do basic climate analysis and data explor
 
   * Plot the results as a histogram with `bins=12`.
 
-    ![station-histogram](Images/station-histogram.png)
-
-* Close out your session.
-
-- - -
 
 ## Step 2 - Climate App
 
@@ -111,17 +102,8 @@ Now that you have completed your initial analysis, design a Flask API based on t
 
   * When given the start and the end date, calculate the `TMIN`, `TAVG`, and `TMAX` for dates between the start and end date inclusive.
 
-## Hints
-
-* You will need to join the station and measurement tables for some of the queries.
-
-* Use Flask `jsonify` to convert your API data into a valid JSON response object.
-
-- - -
 
 ## Bonus: Other Recommended Analyses
-
-* The following are optional challenge queries. These are highly recommended to attempt, but not required for the homework.
 
 * Use the provided [temp_analysis_bonus_1_starter.ipynb](temp_analysis_bonus_1_starter.ipynb) and [temp_analysis_bonus_1_starter](temp_analysis_bonus_2_starter.ipynb) starter notebooks for each bonus challenge.
 
@@ -157,8 +139,6 @@ Now that you have completed your initial analysis, design a Flask API based on t
 
   * Use the peak-to-peak (TMAX-TMIN) value as the y error bar (YERR).
 
-    ![temperature](Images/temperature.png)
-
 ### Daily Rainfall Average
 
 * Now that you have an idea of the temperature lets check to see what the rainfall has been, you don't want a when it rains the whole time!
@@ -180,11 +160,3 @@ Now that you have completed your initial analysis, design a Flask API based on t
 * Load the list of daily normals into a Pandas DataFrame and set the index equal to the date.
 
 * Use Pandas to plot an area plot (`stacked=False`) for the daily normals.
-
-  ![daily-normals](Images/daily-normals.png)
-
-* Close out your session.
-
-### Copyright
-
-Trilogy Education Services © 2020. All Rights Reserved.
